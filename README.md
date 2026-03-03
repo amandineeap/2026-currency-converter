@@ -20,17 +20,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Currency converter
 
-To learn more about Next.js, take a look at the following resources:
+- NextJS base application for ease of use (react, typescript, tailwindcss)
+- Select, SelectInputGroup and ConvertForm components
+- .env.local file to edit with personal API_KEY
+- Fetch currencies and display in the Select component, sort alphabetically
+- Add event handlers for updating the select and input as well as fetching the converted value
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployed application
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can find a deployed version of the application at the following url:
+https://2026-currency-converter.netlify.app/
 
-## Deploy on Vercel
+## With more time I would
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Polish the ui, loading, error states
+- Write relevant tests for components, data fetching and user interactions
+- Add form validation
+- Use form management or state differently (react hook form, useReducer)
+- Add functionality (other input google style, ability to swap the from/to)
