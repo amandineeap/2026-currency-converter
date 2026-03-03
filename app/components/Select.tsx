@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { ChangeEvent, useEffect, useState } from "react"
 import { getCurrenciesList } from "../api/currencies"
 
 type Currency = {
@@ -12,15 +12,16 @@ type Currency = {
 interface SelectProps {
   label: string
   name: string
+  onChange: (value: string) => void
 }
 
-const Select = ({label, name}: SelectProps) => {
+const Select = ({label, name, onChange}: SelectProps) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [currencies, setCurrencies] = useState<Currency[]>([])
 
-  const handleChange = () => {
-    console.log('handle change')
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    onChange(e.target.value)
   }
 
   const sortResults = (results: Currency[]) => {
